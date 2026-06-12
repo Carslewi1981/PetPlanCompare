@@ -1,0 +1,202 @@
+"use client";
+
+import { useState, useMemo } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { SlidersHorizontal, X } from "lucide-react";
+import { useStore } from "@/lib/store";
+import { insurers, ANIMAL_TYPES } from "@/lib/insurers";
+import FilterSidebar from "@/components/FilterSidebar";
+import PlanCard from "@/components/PlanCard";
+
+function filterAndSort(
+  list: typeof insurers,
+  animal: string,
+  filters: ReturnType<typeof useStore>["filters"]
+) {
+  let result = list.filter((ins) => {
+    if (animal !== "all" && !ins.animals.includes(animal)) return false;
+
+    const price =
+      animal === "all"
+        ? Math.min(...Object.values(ins.monthlyPrice).filter((p) => p > 0))
+        : ins.monthlyPrice[animal] || 0;
+    if (price > filters.maxPrice) return false;
+
+    if (filters.minReimbursement !== "any") {
+      const pct = parseInt(ins.reimbursement);
+      if (pct < parseInt(filters.minReimbursement)) return false;
+    }
+
+    if (filters.maxAnnual !== "any" && filters.maxAnnual !== "unlimited") {
+      const threshold = parseInt(filters.maxAnnual);
+      const annualStr = ins.maxAnnual.toLowerCase();
+      if (annualStr === "unlimited") {
+        // pass
+      } else {
+        const annual = parseInt(annualStr.replace(/[^0-9]/g, "")) * 1000;
+        if (annual < threshold) return false;
+      }
+    }
+
+    if (filters.waitingPeriod !== "any") {
+      const days = parseInt(filters.waitingPeriod);
+      const waitDays = parseInt(ins.waitingPeriod.split(" ")[0]) || 99;
+      if (waitDays > days) return false;
+    }
+
+    if (filters.searchTerm) {
+      const term = filters.searchTerm.toLowerCase();
+      if (!ins.name.toLowerCase().includes(term) && !ins.tagline.toLowerCase().includes(term))
+        return false;
+    }
+
+    return true;
+  });
+
+  result = result.sort((a, b) => {
+    const priceA =
+      animal === "all"
+        ? Math.min(...Object.values(a.monthlyPrice).filter((p) => p > 0))
+        : a.monthlyPrice[animal] || 0;
+    const priceB =
+      animal === "all"
+        ? Math.min(...Object.values(b.monthlyPrice).filter((p) => p > 0))
+        : b.monthlyPrice[animal] || 0;
+
+    switch (filters.sortBy) {
+      case "price":
+        return priceA - priceB;
+      case "reviews":
+        return b.reviews - a.reviews;
+      case "claims":
+        return parseInt(a.claimsTime) - parseInt(b.claimsTime);
+      default:
+        return b.rating - a.rating;
+    }
+  });
+
+  return result;
+}
+
+export default function ComparePage() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const { selectedAnimal, filters } = useStore();
+
+  const animalLabel =
+    selectedAnimal === "all"
+      ? "All Animals"
+      : ANIMAL_TYPES.find((a) => a.id === selectedAnimal)?.label + "s" || "";
+
+  const filtered = useMemo(
+    () => filterAndSort(insurers, selectedAnimal, filters),
+    [selectedAnimal, filters]
+  );
+
+  return (
+    <div className="min-h-screen bg-[#0A0A0A] pt-16">
+      {/* Page header */}
+      <div className="bg-[#1E3A8A] border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <h1 className="font-bebas text-4xl tracking-widest text-white">
+            COMPARE PET INSURANCE <span className="text-brand-red">PLANS</span>
+          </h1>
+          <p className="text-blue-200 text-sm mt-1">
+            Find the perfect plan for your pet — filter, compare, and connect with providers.
+          </p>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="flex gap-8">
+          {/* Sidebar — desktop */}
+          <aside className="hidden lg:block w-72 flex-shrink-0">
+            <div className="sticky top-20 bg-[#0D1B3E] border border-white/10 p-5">
+              <FilterSidebar />
+            </div>
+          </aside>
+
+          {/* Mobile filter toggle */}
+          <div className="lg:hidden fixed bottom-6 right-6 z-40">
+            <button
+              onClick={() => setSidebarOpen(true)}
+              className="flex items-center gap-2 bg-brand-navy border border-brand-blue text-white px-4 py-3 text-sm font-bold uppercase tracking-widest shadow-xl"
+            >
+              <SlidersHorizontal className="w-4 h-4" />
+              Filters
+            </button>
+          </div>
+
+          {/* Mobile sidebar drawer */}
+          <AnimatePresence>
+            {sidebarOpen && (
+              <>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="fixed inset-0 bg-black/60 z-40 lg:hidden"
+                  onClick={() => setSidebarOpen(false)}
+                />
+                <motion.div
+                  initial={{ x: "-100%" }}
+                  animate={{ x: 0 }}
+                  exit={{ x: "-100%" }}
+                  transition={{ type: "tween" }}
+                  className="fixed left-0 top-0 bottom-0 w-80 bg-[#0D1B3E] border-r border-white/10 z-50 overflow-y-auto p-5 lg:hidden"
+                >
+                  <div className="flex justify-between items-center mb-6">
+                    <span className="font-bebas text-xl tracking-widest text-white">FILTERS</span>
+                    <button onClick={() => setSidebarOpen(false)}>
+                      <X className="w-5 h-5 text-gray-400" />
+                    </button>
+                  </div>
+                  <FilterSidebar />
+                </motion.div>
+              </>
+            )}
+          </AnimatePresence>
+
+          {/* Main content */}
+          <div className="flex-1 min-w-0">
+            {/* Results header */}
+            <div className="flex items-center justify-between mb-6">
+              <div>
+                <span className="font-bebas text-2xl tracking-wide text-white">
+                  {filtered.length}{" "}
+                  <span className="text-gray-400">
+                    plan{filtered.length !== 1 ? "s" : ""} found for {animalLabel}
+                  </span>
+                </span>
+              </div>
+            </div>
+
+            {/* Cards grid */}
+            {filtered.length === 0 ? (
+              <div className="text-center py-24 text-gray-500">
+                <div className="text-5xl mb-4">🔍</div>
+                <p className="font-bebas text-2xl tracking-wide text-gray-600 mb-2">NO PLANS MATCH YOUR FILTERS</p>
+                <p className="text-sm">Try adjusting your filters or resetting them.</p>
+              </div>
+            ) : (
+              <motion.div
+                layout
+                className="grid grid-cols-1 xl:grid-cols-2 gap-4"
+              >
+                <AnimatePresence mode="popLayout">
+                  {filtered.map((insurer, i) => (
+                    <PlanCard
+                      key={insurer.id}
+                      insurer={insurer}
+                      animal={selectedAnimal}
+                      index={i}
+                    />
+                  ))}
+                </AnimatePresence>
+              </motion.div>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
