@@ -13,7 +13,7 @@ export default function Footer() {
                 <Shield className="w-5 h-5 text-white" />
               </div>
               <span className="font-bebas text-2xl tracking-widest text-white">
-                PET<span className="text-brand-red">IT</span>
+                Compare Pet<span className="text-brand-red"> Plans</span>
               </span>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed">
@@ -75,10 +75,10 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-white/10">
           <p className="text-gray-600 text-xs leading-relaxed max-w-4xl">
-            <strong className="text-gray-500">Disclaimer:</strong> PetIT is an independent comparison platform and is not affiliated with any insurance provider listed. Plan details, pricing, and availability are subject to change. Always verify coverage details directly with the provider before purchasing. PetIT does not sell insurance and is not a licensed insurance agent.
+            <strong className="text-gray-500">Disclaimer:</strong> Compare Pet Plans is an independent comparison platform and is not affiliated with any insurance provider listed. Plan details, pricing, and availability are subject to change. Always verify coverage details directly with the provider before purchasing. Compare Pet Plans does not sell insurance and is not a licensed insurance agent.
           </p>
           <p className="text-gray-700 text-xs mt-4">
-            © {new Date().getFullYear()} PetIT. All rights reserved.
+            © {new Date().getFullYear()} Compare Pet Plans. All rights reserved.
           </p>
         </div>
       </div>

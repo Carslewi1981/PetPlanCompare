@@ -38,7 +38,7 @@ export default function Navbar() {
               <Shield className="w-5 h-5 text-white" />
             </div>
             <span className="font-bebas text-2xl tracking-widest text-white">
-              PET<span className="text-brand-red">IT</span>
+              Compare Pet<span className="text-brand-red"> Plans</span>
             </span>
           </Link>
 
