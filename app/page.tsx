@@ -8,6 +8,7 @@ import TrustBar from "@/components/TrustBar";
 import VetCostSection from "@/components/VetCostSection";
 import HowItWorks from "@/components/HowItWorks";
 import ReviewsSection from "@/components/ReviewsSection";
+import PetGallery from "@/components/PetGallery";
 import PlanCard from "@/components/PlanCard";
 import { insurers } from "@/lib/insurers";
 import { useStore } from "@/lib/store";
@@ -152,6 +153,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Interactive pet gallery */}
+      <PetGallery />
 
       {/* Provider trust bar — dark tile */}
       <section className="bg-[#2a2a2c]" style={{ padding: "64px 0" }}>
