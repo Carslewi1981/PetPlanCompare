@@ -19,7 +19,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Petz Insurance Compare — Pet Insurance Comparison",
+  title: "PetPlan Compare — Pet Insurance Comparison",
   description:
     "Compare top pet insurance plans for dogs, cats, birds, reptiles, and exotic animals — in seconds.",
 };

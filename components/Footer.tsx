@@ -35,7 +35,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="font-bebas text-xl tracking-widest text-[#1d1d1f] mb-3">
-              Petz Insurance<span className="text-[#0066cc]"> Compare</span>
+              PetPlan<span className="text-[#0066cc]"> Compare</span>
             </div>
             <p className="text-[#7a7a7a] text-[12px] leading-relaxed">
               {t.footer_desc}
@@ -99,7 +99,7 @@ export default function Footer() {
             <strong className="text-[#333333]">Disclaimer:</strong> {t.footer_disclaimer}
           </p>
           <p className="text-[12px] text-[#7a7a7a]">
-            © {new Date().getFullYear()} Petz Insurance Compare. {t.footer_rights}
+            © {new Date().getFullYear()} PetPlan Compare. {t.footer_rights}
           </p>
         </div>
       </div>

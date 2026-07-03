@@ -30,7 +30,7 @@ A deductible is the amount you pay out-of-pocket before your pet insurance kicks
 
 Higher deductibles mean lower monthly premiums but more out-of-pocket costs per incident. Lower deductibles offer better protection but higher premiums. A good rule of thumb: choose a deductible you could comfortably pay out of an emergency fund.
 
-Common deductible ranges you'll see on comparison platforms like Petz Insurance Compare include $100, $200, $250, $500, and $1,000.
+Common deductible ranges you'll see on comparison platforms like PetPlan Compare include $100, $200, $250, $500, and $1,000.
 
 ## Tips for Deductible Decisions
 
@@ -93,7 +93,7 @@ Coverage varies widely by provider. Common exotic pets that some insurers cover:
 - **Small mammals**: rabbits, guinea pigs, ferrets, chinchillas, hamsters
 - **Other**: sugar gliders, hedgehogs, potbellied pigs
 
-Providers like ExoticShield and AquaAvian (both featured on Petz Insurance Compare) specialize in non-traditional pet coverage.
+Providers like ExoticShield and AquaAvian (both featured on PetPlan Compare) specialize in non-traditional pet coverage.
 
 ## Key Things to Look for in Exotic Pet Policies
 
@@ -127,7 +127,7 @@ Early enrollment also means lower premiums — insurers base rates partly on you
 
 ## Age Limits and Senior Pet Insurance
 
-Most insurers have maximum enrollment ages — commonly 10–14 years for dogs and cats. Some providers, like SeniorPaws (featured on Petz Insurance Compare), specifically cater to older animals with no age caps and coverage for age-related conditions like arthritis, cognitive dysfunction, and heart disease.
+Most insurers have maximum enrollment ages — commonly 10–14 years for dogs and cats. Some providers, like SeniorPaws (featured on PetPlan Compare), specifically cater to older animals with no age caps and coverage for age-related conditions like arthritis, cognitive dysfunction, and heart disease.
 
 Even if your senior pet already has some health issues, insurance can still be worthwhile — the conditions that develop *after* enrollment will be covered.
 

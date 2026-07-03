@@ -75,7 +75,7 @@ export default function Navbar() {
           href="/"
           className="font-bebas text-lg tracking-widest text-white leading-none"
         >
-          Petz Insurance<span className="text-[#0066cc]"> Compare</span>
+          PetPlan<span className="text-[#0066cc]"> Compare</span>
         </Link>
 
         {/* Desktop links */}

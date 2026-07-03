@@ -45,7 +45,7 @@ export default function AboutPage() {
             <span style={{ color: "#2997ff" }}>care it deserves.</span>
           </h1>
           <p className="text-[#cccccc]" style={{ fontSize: 21, lineHeight: 1.19, letterSpacing: "0.231px" }}>
-            Petz Insurance Compare was founded by pet owners frustrated by opaque insurance comparisons,
+            PetPlan Compare was founded by pet owners frustrated by opaque insurance comparisons,
             confusing policies, and providers who didn&apos;t cover exotic animals.
           </p>
         </div>
@@ -66,7 +66,7 @@ export default function AboutPage() {
               — yet the industry has historically been confusing, inconsistent, and exclusionary.
             </p>
             <p>
-              Petz Insurance Compare changes that. We aggregate coverage from across the industry, normalize the
+              PetPlan Compare changes that. We aggregate coverage from across the industry, normalize the
               data for easy comparison, and present it transparently — so you can make the best
               decision for your specific pet, budget, and risk tolerance.
             </p>
@@ -101,7 +101,7 @@ export default function AboutPage() {
             </p>
             <p>
               When you click "Get a Quote" or "Contact", you're directed to the provider's own
-              systems. Petz Insurance Compare does not process insurance applications or handle premium payments.
+              systems. PetPlan Compare does not process insurance applications or handle premium payments.
               We are a comparison and education platform only.
             </p>
           </div>
