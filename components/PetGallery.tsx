@@ -232,7 +232,7 @@ function PhotoCard({
           src={photo.url}
           alt={photo.caption}
           className="object-cover transition-transform duration-500 group-hover:scale-105"
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", opacity: imgLoaded ? 1 : 0, transition: "opacity 0.4s" }}
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", opacity: imgLoaded ? 1 : 0, transition: "opacity 0.4s", objectPosition: "top" }}
           loading="eager"
           onLoad={() => setImgLoaded(true)}
           onError={() => setImgError(true)}
