@@ -96,7 +96,7 @@ const PET_TYPES: PetType[] = [
       { url: "https://upload.wikimedia.org/wikipedia/commons/9/9c/Rainbow_Lorikeet_Trichoglossus_haematodus_Closeup_2400px.jpg", caption: "Rainbow Lorikeet", detail: "Sunny, 5 yrs", fallback: "🐦" },
       { url: "https://upload.wikimedia.org/wikipedia/commons/c/cc/Rose-ringed_parakeet_at_Mumbai_%28Oct%2C_24%29_01.jpg", caption: "African Ringneck", detail: "Mango, 3 yrs", fallback: "🐦" },
       { url: "https://upload.wikimedia.org/wikipedia/commons/8/83/Yellow_budgerigar.jpg", caption: "Budgerigar", detail: "Pickles, 4 yrs", fallback: "🦜" },
-      { url: "https://upload.wikimedia.org/wikipedia/commons/b/b8/Cacatua_moluccensis_-Cincinnati_Zoo-8a.jpg", caption: "Cockatoo", detail: "Snowy, 10 yrs", fallback: "🦜" },
+      { url: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Gelbwangenkakadu_8559.jpg", caption: "Cockatoo", detail: "Snowy, 10 yrs", fallback: "🦜" },
     ],
   },
   {
