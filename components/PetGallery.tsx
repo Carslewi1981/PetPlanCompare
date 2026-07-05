@@ -71,7 +71,7 @@ const PET_TYPES: PetType[] = [
       { url: u("1472491235688-bdc81a63246e"), caption: "Siamese", detail: "Milo, 3 yrs", fallback: "😺" },
       { url: u("1547565295-182fb8657b6b"), caption: "Sphynx", detail: "Wrinkles, 4 yrs", fallback: "🐈" },
       { url: u("1708863827435-931d4491050c"), caption: "Bengal", detail: "Nala, 2 yrs", fallback: "🐱" },
-      { url: u("1644604324741-e50705a4c12a"), caption: "Ragdoll", detail: "Marshmallow, 3 yrs", fallback: "🐈" },
+      { url: u("1526336024174-e58f5cdd8e13"), caption: "Norwegian Forest Cat", detail: "Misty, 4 yrs", fallback: "🐈" },
       { url: u("1455970022149-a8f26b6902dd"), caption: "Maine Coon", detail: "Thor, 4 yrs", fallback: "😺" },
       { url: u("1595433708220-3aa013e5e43f"), caption: "Scottish Fold", detail: "Pixel, 2 yrs", fallback: "🐱" },
       { url: u("1629624467541-f73ef8f12df2"), caption: "British Shorthair", detail: "Cobalt, 3 yrs", fallback: "🐈" },
@@ -89,7 +89,7 @@ const PET_TYPES: PetType[] = [
     ctaLabel: "Compare bird plans",
     riskNote: "Psittacosis · Proventricular disease · Crop issues · Feather destructive behavior",
     photos: [
-      { url: u("1552728089-57bdde30beb3"), caption: "Alexandrine Parakeet", detail: "Einstein, 12 yrs", fallback: "🦜" },
+      { url: "https://upload.wikimedia.org/wikipedia/commons/1/16/Eclectus_Parrot_%28Eclectus_roratus%29_-pair.jpg", caption: "Eclectus Parrot", detail: "Mango, 8 yrs", fallback: "🦜" },
       { url: u("1452570053594-1b985d6ea890"), caption: "Blue & Gold Macaw", detail: "Kiwi, 8 yrs", fallback: "🦜" },
       { url: u("1555169062-013468b47731"), caption: "Sun Conure", detail: "Coco, 6 yrs", fallback: "🦜" },
       { url: u("1517101724602-c257fe568157"), caption: "Cockatiel", detail: "Sunshine, 5 yrs", fallback: "🐦" },
@@ -112,7 +112,7 @@ const PET_TYPES: PetType[] = [
     riskNote: "GI stasis · Dental disease · Uterine cancer (unspayed) · E. cuniculi",
     photos: [
       { url: u("1585110396000-c9ffd4e4b308"), caption: "Holland Lop", detail: "Pebbles, 3 yrs", fallback: "🐇" },
-      { url: u("1700655058708-8bf4945e1093"), caption: "Flemish Giant", detail: "Goliath, 4 yrs", fallback: "🐰" },
+      { url: "https://upload.wikimedia.org/wikipedia/commons/0/05/English_Lop.jpg", caption: "English Lop", detail: "Dumbo, 3 yrs", fallback: "🐰" },
       { url: u("1535241749838-299277b6305f"), caption: "Rex Rabbit", detail: "Velvet, 2 yrs", fallback: "🐇" },
       { url: u("1707835774707-2861ff96de3e"), caption: "Dutch Rabbit", detail: "Oreo, 1 yr", fallback: "🐰" },
       { url: u("1452857297128-d9c29adba80b"), caption: "Lionhead", detail: "Mufasa, 2 yrs", fallback: "🐇" },
@@ -133,7 +133,7 @@ const PET_TYPES: PetType[] = [
     ctaLabel: "Compare reptile plans",
     riskNote: "Metabolic bone disease · Egg-binding · Respiratory infections · Parasites",
     photos: [
-      { url: u("1619816128374-a6b4766ca92c"), caption: "Bearded Dragon", detail: "Spike, 3 yrs", fallback: "🦎" },
+      { url: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Tiliqua_scincoides_scincoides.jpg", caption: "Blue-tongued Skink", detail: "Blaze, 5 yrs", fallback: "🦎" },
       { url: u("1769020537737-8de072cd330b"), caption: "Ball Python", detail: "Coral, 4 yrs", fallback: "🐍" },
       { url: u("1588271174559-1f5dc8750e5f"), caption: "Crested Gecko", detail: "Camo, 2 yrs", fallback: "🦎" },
       { url: u("1768156127147-b7c78be66854"), caption: "Green Iguana", detail: "Verde, 6 yrs", fallback: "🦎" },
