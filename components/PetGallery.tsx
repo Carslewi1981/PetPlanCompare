@@ -30,7 +30,7 @@ interface PetType {
 
 // Unsplash CDN — verified timestamp-format photo IDs
 const u = (id: string) =>
-  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=600&h=600&q=80`;
+  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&crop=entropy&w=600&h=600&q=80`;
 
 const PET_TYPES: PetType[] = [
   {
@@ -231,7 +231,7 @@ function PhotoCard({
           ref={imgRef}
           src={photo.url}
           alt={photo.caption}
-          className="object-contain transition-transform duration-500 group-hover:scale-105"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", opacity: imgLoaded ? 1 : 0, transition: "opacity 0.4s" }}
           loading="eager"
           onLoad={() => setImgLoaded(true)}
