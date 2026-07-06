@@ -140,7 +140,7 @@ export default function Footer() {
           {/* Legal disclaimer + copyright */}
           <div className="flex flex-col md:flex-row gap-4 justify-between">
             <p style={{ fontSize: 11, color: "rgba(255,255,255,0.18)", lineHeight: 1.7, maxWidth: 640 }}>
-              <strong style={{ color: "rgba(255,255,255,0.28)" }}>Disclaimer:</strong> {t.footer_disclaimer}
+              <strong style={{ color: "#c9a96e", letterSpacing: "0.06em", textTransform: "uppercase", fontSize: 9 }}>Disclaimer&nbsp;&nbsp;</strong>{t.footer_disclaimer}
             </p>
             <p style={{ fontSize: 11, color: "rgba(255,255,255,0.18)", flexShrink: 0 }}>
               © {new Date().getFullYear()} PetPlan Compare
