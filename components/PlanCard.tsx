@@ -66,12 +66,14 @@ export default function PlanCard({ insurer, animal, index = 0 }: PlanCardProps) 
 
       <div className="p-6">
         <div className="flex items-start gap-3 mb-5 pr-8">
-          <div
-            className="w-12 h-12 flex items-center justify-center text-2xl flex-shrink-0"
-            style={{ backgroundColor: insurer.color + "15", borderRadius: 8 }}
-          >
-            {insurer.logo}
-          </div>
+          {insurer.logo && (
+            <div
+              className="w-12 h-12 flex items-center justify-center text-2xl flex-shrink-0"
+              style={{ backgroundColor: insurer.color + "15", borderRadius: 8 }}
+            >
+              {insurer.logo}
+            </div>
+          )}
           <div>
             <h3
               className="font-semibold leading-tight"
